@@ -1,23 +1,75 @@
+// Quiz Questons
 const quiz = [
   {
-    question: "What is the capital of France?",
-    options: ["London", "Berlin", "Paris", "Madrid"],
-    answer: "Paris",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: ["Earth", "Mars", "Jupiter", "Venus"],
-    answer: "Mars",
-  },
-  {
-    question: "Who wrote 'Hamlet'?",
+    question: "Who was the first president of Nigeria?",
     options: [
-      "Charles Dickens",
-      "William Shakespeare",
-      "Mark Twain",
-      "Jane Austen",
+      "Nnamdi Azikiwe",
+      "Tafawa Balewa",
+      "Olusegun Obasanjo",
+      "Yakubu Gowon",
     ],
-    answer: "William Shakespeare",
+    answer: "Nnamdi Azikiwe",
+  },
+  {
+    question: "Which river is the longest in Nigeria?",
+    options: ["River Benue", "River Ogun", "River Kaduna", "River Niger"],
+    answer: "River Niger",
+  },
+  {
+    question: "What is Nigeria's most populous city?",
+    options: ["Abuja", "Port Harcourt", "Lagos", "Ibadan"],
+    answer: "Lagos",
+  },
+  {
+    question: "What is the major religion in Northern Nigeria?",
+    options: ["Christianity", "Islam", "Hinduism", "Buddhism"],
+    answer: "Islam",
+  },
+  {
+    question: "Which Nigerian festival celebrates the New Yam harvest?",
+    options: [
+      "Eyo Festival",
+      "Osun-Osogbo Festival",
+      "Argungu Festival",
+      "Iri Ji Festival",
+    ],
+    answer: "Iri Ji Festival",
+  },
+  {
+    question: "What is the national motto of Nigeria?",
+    options: [
+      "Peace, Unity and Justice",
+      "Unity and Faith, Peace and Progress",
+      "Freedom and Justice",
+      "Strength and Honor",
+    ],
+    answer: "Unity and Faith, Peace and Progress",
+  },
+  {
+    question:
+      "Which of the following is a Nigerian music legend known globally for Afrobeat?",
+    options: ["King Sunny Ade", "Burna Boy", "Fela Kuti", "Wizkid"],
+    answer: "Fela Kuti",
+  },
+  {
+    question: "What body regulates university education in Nigeria?",
+    options: ["NUC", "WAEC", "JAMB", "NYSC"],
+    answer: "NUC (National Universities Commission)",
+  },
+  {
+    question: "What type of government does Nigeria practice?",
+    options: [
+      "Monarchy",
+      "Military rule",
+      "Federal Republic",
+      "Communist State",
+    ],
+    answer: "Federal Republic",
+  },
+  {
+    question: "What is Nigeria’s national flower?",
+    options: ["Rose", "Sunflower", "Costus Spectabilis", "Hibiscus"],
+    answer: "Costus Spectabilis",
   },
 ];
 
