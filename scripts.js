@@ -1,4 +1,4 @@
-// Quiz Questons
+// Quiz Questions
 const quiz = [
   {
     question: "Who was the first president of Nigeria?",
@@ -54,7 +54,7 @@ const quiz = [
   {
     question: "What body regulates university education in Nigeria?",
     options: ["NUC", "WAEC", "JAMB", "NYSC"],
-    answer: "NUC (National Universities Commission)",
+    answer: "NUC", // 🔧 Fixed: this must match one of the options exactly
   },
   {
     question: "What type of government does Nigeria practice?",
@@ -78,47 +78,53 @@ let score = 0;
 let totalTime = 60; // total quiz time in seconds
 let timer;
 
-// Load the first question
+// Load the current question
 function loadQuestion() {
   const q = quiz[current];
   document.getElementById("question").textContent = q.question;
 
   const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
-  q.options.forEach((option) => {
+
+  q.options.forEach((option, index) => {
     optionsDiv.innerHTML += `
       <label>
         <input type="radio" name="option" value="${option}"> ${option}
-      </label>
+      </label><br>
     `;
   });
 }
 
-// Handle the next question button click
+// Handle the "Next" button click
 function nextQuestion() {
   const selected = document.querySelector('input[name="option"]:checked');
   if (!selected) {
     alert("Please select an answer.");
     return;
   }
-// Check if the selected answer is correct
+
+  // Check answer
   if (selected.value === quiz[current].answer) {
     score++;
-    }
+  }
+
   current++;
-// Load the next question or end the quiz
+
+  // Load next question or finish quiz
   if (current < quiz.length) {
     loadQuestion();
   } else {
     endQuiz();
   }
 }
-// handle the timer
+
+// Start countdown timer
 function startTimer() {
   const timerDisplay = document.getElementById("timer");
   timer = setInterval(() => {
     totalTime--;
     timerDisplay.textContent = `Time left: ${totalTime}s`;
+
     if (totalTime <= 0) {
       clearInterval(timer);
       endQuiz();
@@ -126,18 +132,21 @@ function startTimer() {
   }, 1000);
 }
 
-// End the quiz and show the score
+// End quiz and show score
 function endQuiz() {
   clearInterval(timer);
+
+  // Hide question and options
   document.getElementById("question").style.display = "none";
   document.getElementById("options").style.display = "none";
   document.querySelector("button").style.display = "none";
-  document.getElementById("score").style.display = "block";
-  document.getElementById(
-    "score"
-  ).textContent = `Your score is ${score} out of ${quiz.length}`;
+
+  // Show score
+  const scoreDiv = document.getElementById("score");
+  scoreDiv.style.display = "block";
+  scoreDiv.textContent = `Your score is ${score} out of ${quiz.length}`;
 }
 
-// Initial load
+// Initialize quiz
 loadQuestion();
 startTimer();
