@@ -1,9 +1,37 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #2b0ace;
+    background-color: #e0dfdf;
 }
 
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.welcome-message {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+#timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+    text-align: right;
+    margin-bottom: 20px;
+}
 .quiz-container {
     max-width: 400px;
     margin: auto;
@@ -14,13 +42,19 @@ body {
 }
 
 .question {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.options {
+    font-style: italic;
 }
 
 .options label {
     display: block;
-    margin: 8px 0;
+    margin: 5px 0;
 }
 
 button {
